@@ -2,10 +2,6 @@ variable "hcloud_token" {
   sensitive = true
 }
 
-variable "ssh_pub_key_name" {
-  default = "msytnyk"
-}
-
 variable "server_name" {
   default = "terraform"
 }
@@ -19,11 +15,11 @@ variable "server_type" {
 }
 
 variable "server_location" {
-  default = "fsn1"
+  default = "hel1"
 }
 
 variable "server_ssh_key" {
-  default = ""
+  default = [""]
 }
 
 variable "server_user_data" {
@@ -31,5 +27,5 @@ variable "server_user_data" {
 }
 
 variable "server_iso" {
-  default = "11311" # NixOS 21.11 (amd64/minimal)
+  default = null
 }
