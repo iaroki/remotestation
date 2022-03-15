@@ -11,7 +11,7 @@ module "server" {
   server_type      = var.server_type
   server_image     = var.server_image
   server_location  = var.server_location
-  server_ssh_key   = [ module.ssh.ssh_key_id ]
+  server_ssh_key   = [module.ssh.ssh_key_id]
   server_user_data = var.server_user_data
   server_iso       = var.server_iso
 }
