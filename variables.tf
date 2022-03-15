@@ -20,7 +20,7 @@ variable "server_image" {
 
 variable "server_type" {
   type    = string
-  default = "cx11"
+  default = "cpx11"
 }
 
 variable "server_location" {
