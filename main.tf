@@ -1,9 +1,5 @@
-resource "hcloud_ssh_key" "this" {
-  name       = var.ssh_pub_key_name
-  public_key = file(var.ssh_pub_key_file)
-  labels     = {
-    provisioner = "terraform"
-    remote      = "true"
-    owner       = var.ssh_pub_key_name
-  }
+module "ssh" {
+  source = "./modules/hcloud_ssh_key"
+  hcloud_token = var.hcloud_token
+  ssh_pub_key_name = var.ssh_pub_key_name
 }
