@@ -6,4 +6,10 @@ resource "hcloud_server" "this" {
   ssh_keys    = var.server_ssh_key
   user_data   = var.server_user_data
   iso         = var.server_iso
+
+  labels = {
+    provisioner = "terraform"
+    remote      = "true"
+    owner       = var.server_name
+  }
 }
